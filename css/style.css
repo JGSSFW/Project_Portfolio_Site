@@ -1,0 +1,139 @@
+/* Estilização base com a fonte Inter */
+body {
+    font-family: 'Inter', sans-serif;
+}
+/* Definindo as cores para o tema escuro como padrão */
+:root {
+    --bg-primary: #f3f4f6;
+    --text-primary: #1f2937;
+    --text-secondary: #4b5563;
+    --accent-purple: #4f46e5;
+    --accent-pink: #db2777; /* Rosa mais vibrante para light mode */
+    --surface: #ffffff;
+    --border: #e5e7eb;
+}
+
+.dark {
+    --bg-primary: #111827;
+    --text-primary: #f9fafb;
+    --text-secondary: #d1d5db;
+    --accent-purple: #4f46e5;
+    --accent-pink: #9f1239;
+    --surface: #1f2937;
+    --border: #374151;
+}
+
+.name-highlight {
+    color: var(--accent-purple);
+}
+
+/* Escondendo a barra de rolagem padrão do navegador */
+html {
+   -ms-overflow-style: none; /* IE and Edge */
+   scrollbar-width: none; /* Firefox */
+}
+html::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+}
+
+/* Adicionando transição suave para a barra de rolagem personalizada */
+#scrollbar-progress {
+    transition: height 100ms ease-out;
+}
+
+/* Efeito de hover no menu de navegação */
+.nav-link {
+    position: relative;
+    padding-bottom: 5px;
+}
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--accent-purple);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease-out;
+}
+.nav-link:hover::after {
+    transform: scaleX(1);
+}
+
+/* Novo efeito de hover para botões */
+.main-button {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    background-color: var(--accent-purple);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.main-button > span {
+     position: relative;
+     z-index: 2;
+}
+.main-button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px -10px rgba(0, 0, 0, 0.4);
+}
+.main-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--accent-pink), var(--accent-purple));
+    z-index: -1;
+    opacity: 0; /* Começa transparente */
+    transition: opacity 0.4s ease-in-out; /* Transição suave na opacidade */
+}
+.main-button:hover::after {
+    opacity: 1; /* Fica visível no hover */
+}
+
+/* Animações de Abertura e Aceno */
+@keyframes jump-in-out {
+    0% { transform: translateY(150%); opacity: 0; }
+    20% { transform: translateY(0); opacity: 1; }
+    80% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-150%); opacity: 0; }
+}
+.intro-greeting-anim {
+    animation: jump-in-out 1.2s ease-in-out forwards;
+}
+
+@keyframes wave {
+    0%, 100% { transform: rotate(0deg); }
+    10%, 30% { transform: rotate(14deg); }
+    20%, 40% { transform: rotate(-8deg); }
+    50% { transform: rotate(4deg); }
+}
+.waving-hand-intro {
+    animation: wave 2.5s ease-in-out infinite;
+    transform-origin: 70% 70%;
+    display: inline-block;
+}
+
+.waving-hand-main {
+    display: inline-block;
+    transform-origin: 70% 70%;
+    animation: wave 2s ease-in-out;
+}
+
+/* Loading Spinner */
+.loader {
+    border: 4px solid #f3f3f320;
+    border-top: 4px solid var(--accent-purple);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

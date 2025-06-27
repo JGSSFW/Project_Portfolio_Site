@@ -26,27 +26,42 @@ Este projeto foi construído do zero, focando em performance e nas tecnologias w
 * **HTML5:** Estrutura semântica do conteúdo.  
 * **CSS3:** Estilização e animações.  
   * **Tailwind CSS:** Framework utilitário para agilizar o desenvolvimento do layout e do design responsivo.  
-  * **CSS Personalizado:** Para detalhes finos como a paleta de cores, a barra de rolagem e animações @keyframes.  
+  * **CSS Personalizado:** Para detalhes finos como a paleta de cores, a barra de rolagem e animações `@keyframes`.  
 * **JavaScript (Vanilla JS):** Utilizado para toda a interatividade e lógica do lado do cliente, incluindo:  
   * Manipulação do DOM.  
-  * Consumo da API do GitHub (fetch).  
+  * Consumo da API do GitHub (`fetch`).  
   * Gestão de eventos (cliques, hover, scroll).  
-  * Gestão de estado para os temas e idiomas (localStorage).
+  * Gestão de estado para os temas e idiomas (`localStorage`).
+
+## **📁 Estrutura do Projeto**
+
+O projeto está organizado na seguinte estrutura de pastas para uma fácil manutenção:
+
+seu-portfolio/  
+├── 📄 index.html  
+├── 📁 css/  
+│   └── 📄 style.css  
+├── 📁 js/  
+│   └── 📄 main.js  
+└── 📁 assets/  
+    └── 📁 images/  
+        ├── 🖼️ foto-perfil-1.jpeg  
+        └── 🖼️ foto-perfil-2.jpeg
 
 ## **🛠️ Como Utilizar**
 
 Se você quiser usar este projeto como um modelo para o seu próprio portfólio, siga estes passos:
 
-1. Faça um Fork do Repositório:  
-   Clique no botão "Fork" no canto superior direito desta página para criar uma cópia no seu próprio GitHub.  
+1. **Faça um Fork do Repositório:** Clique no botão "Fork" no canto superior direito desta página para criar uma cópia no seu próprio GitHub.  
 2. **Altere as Informações:**  
-   * **No index.html:**  
+   * **No `index.html`:**  
      * Altere os links para o seu **GitHub**, **LinkedIn**, **WhatsApp** e **e-mail**.  
-     * Substitua o link da sua foto de perfil na secção "Sobre Mim".  
-   * **No script (dentro do index.html):**  
-     * Na função fetchGitHubProjects, mude a variável username para o seu nome de utilizador do GitHub.  
-     * Atualize o objeto manualDemoLinks com os links das demos dos seus próprios projetos.  
+     * Substitua os links das suas fotos de perfil na secção "Sobre Mim".  
+   * **No `js/main.js`:**  
+     * Na função `fetchGitHubProjects`, mude a variável `username` para o seu nome de utilizador do GitHub.  
+     * Atualize o objeto `manualDemoLinks` com os links das demos dos seus próprios projetos.  
 3. **Publique com o GitHub Pages:**  
-   * Vá a Settings \> Pages no seu repositório.  
-   * Selecione o ramo main (ou master) como fonte e clique em "Save".  
+   * Vá a `Settings > Pages` no seu repositório.  
+   * Selecione o ramo `main` (ou `master`) como fonte e clique em "Save".  
    * O seu novo portfólio estará online em poucos minutos\!
+
