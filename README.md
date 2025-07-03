@@ -44,8 +44,8 @@ seu-portfolio/
 ├── 📁 js/  
 │   └── 📄 main.js  
 └── 📁 assets/  
-│   └── 📁 images/  
-    │   ├── 🖼️ foto-perfil-1.jpeg  
+    └── 📁 images/  
+        ├── 🖼️ foto-perfil-1.jpeg  
         └── 🖼️ foto-perfil-2.jpeg
 
 ## **🛠️ Como Utilizar**
